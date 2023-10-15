@@ -10,9 +10,7 @@ function Books(props) {
             //create the book list on the READ page.
             <li key={index}>
               <h4>Title: {book.title}</h4>
-              <p>ISBN: {book.isbn}</p>
               <p>Authors: {book.authors}</p>
-              <p>Status: {book.status}</p>
               <img src={book.imageURL} alt={book.title} />
             </li>
           ))}
@@ -22,3 +20,13 @@ function Books(props) {
   }
   
   export default Books;
+
+  /* Full details code copied for safe keeping and later reference
+            <li key={index}>
+              <h4>Title: {book.title}</h4>
+              <p>ISBN: {book.isbn}</p>
+              <p>Authors: {book.authors}</p>
+              <p>Status: {book.status}</p>
+              <img src={book.imageURL} alt={book.title} />
+            </li>
+  */
