@@ -1,4 +1,5 @@
 function Content(){
+    //Pass some h1 tagged example text, then pass the current time on page load/refresh
     return(
         <div>
             <h1>Hello world!</h1>
