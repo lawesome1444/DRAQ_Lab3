@@ -7,6 +7,7 @@ import Read from './components/read';
 import Create from './components/create';
 //Adding Bootstrap and different React/NodeJS modules
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';

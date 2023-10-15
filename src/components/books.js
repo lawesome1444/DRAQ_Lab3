@@ -1,3 +1,4 @@
+import Card from 'react-bootstrap/Card';
 function Books(props) {
     const booksDetails = props.booksDetails;
   
@@ -9,9 +10,11 @@ function Books(props) {
             //This is a template that is filled in with each of the Book List entries in order to
             //create the book list on the READ page.
             <li key={index}>
-              <h4>Title: {book.title}</h4>
+              <Card style={{width: '18rem'}}>
+              <Card.Title>Title: {book.title}</Card.Title>
               <p>Authors: {book.authors}</p>
               <img src={book.imageURL} alt={book.title} />
+              </Card>
             </li>
           ))}
         </ul>
