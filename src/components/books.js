@@ -1,29 +1,20 @@
-import Card from 'react-bootstrap/Card';
+//Since the layout is now in bookItems, it is imported so data can be passed to it
+import BookItems from "./bookItems";
 function Books(props) {
-    const booksDetails = props.booksDetails;
-  
-    return (
-      <div>
-        <h3>Books Component</h3>
-        <ul>
-          {booksDetails.map((book, index) => (
-            //This is a template that is filled in with each of the Book List entries in order to
-            //create the book list on the READ page.
-            <li key={index}>
-              <Card style={{width: '18rem'}}>
-              <Card.Title>Title: {book.title}</Card.Title>
-              <p>Authors: {book.authors}</p>
-              <img src={book.imageURL} alt={book.title} />
-              </Card>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
+  /*
+  Gives bookItems.js the data so it can parse and add book entries and the html code.
+  Then it gives it Book.js, which then returns it back to read.js to print the book list to the page
+  */
+  return props.booksDetails.map(
+      (book)=>{
+          return <BookItems booksDetails={book}></BookItems>
+      }
+  );
+}
   
   export default Books;
 
+  //Old way, this is before the card overhaul & mapping being done in bookItems.js
   /* Full details code copied for safe keeping and later reference
             <li key={index}>
               <h4>Title: {book.title}</h4>
